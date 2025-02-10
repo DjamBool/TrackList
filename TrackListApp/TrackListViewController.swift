@@ -24,17 +24,9 @@ class TrackListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // кнопка Edit
         navigationItem.leftBarButtonItem = editButtonItem
     }
     // MARK: - Table view data source
-
-// вместо удаления - закомментировал
-    // override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(trackList.count)
         return trackList.count
@@ -60,7 +52,6 @@ class TrackListViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    // убрать "кирпичи"
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
     }
